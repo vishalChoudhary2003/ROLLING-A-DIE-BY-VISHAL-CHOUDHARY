@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Rolling A Die By Vishal Choudhary</title>
+        <style>
+            * {
+                font-size: 65px;
+                text-align: center;
+            }
+            img {
+                height: 400px;
+                width: auto;
+                 border-radius: 60px;
+                 border-color: black;
+
+            }
+            .btn {
+                width: 400px;
+                border-radius: 12px;
+            }
+            .btn:hover {
+                color: bisque;
+                background-color: teal;
+            }
+            body {
+                background-color: rgb(22, 160, 214);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Rolling a Die</h1>
+        <button onclick="rollDie()" class="btn">Roll</button>
+        <br><br>
+        <img src="d1.jpg" id="image">
+        
+        <script>
+            function rollDie() {
+                let image = document.getElementById("image");
+                let names = ["d1.jpg", "d2.jpg", "d3.jpg", "d4.jpg", "d5.jpg", "d6.jpg"];
+                let r = Math.floor(Math.random() * names.length);
+                image.src = names[r];
+            }
+        </script>
+    </body>
+</html>
